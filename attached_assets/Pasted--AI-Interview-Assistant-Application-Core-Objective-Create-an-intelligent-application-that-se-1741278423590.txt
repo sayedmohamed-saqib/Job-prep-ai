@@ -1,0 +1,120 @@
+# AI Interview Assistant Application
+
+## Core Objective
+Create an intelligent application that seamlessly integrates with popular meeting platforms (Zoom, Google Meet, Microsoft Teams) to provide real-time interview assistance. The application should identify speakers, distinguish between interviewer and interviewee, analyze questions in real-time, and suggest optimal responses to the interviewee through a discreet interface.
+
+## Technical Requirements
+
+### Meeting Platform Integration
+- Implement API integrations with Zoom, Google Meet, and Microsoft Teams
+- Create stable WebRTC connections to capture audio/video streams
+- Develop fallback methods for platforms without direct API access (browser extensions, desktop agents)
+- Handle authentication flows securely for each platform
+
+### Speaker Identification
+- Implement voice fingerprinting algorithms to distinguish between multiple speakers
+- Create a role classification system to identify:
+  - Primary interviewer(s)
+  - Secondary interviewer(s)
+  - Interviewee
+  - Other participants
+- Train models to recognize speaker transitions and interruptions
+- Maintain speaker profiles throughout the session even with poor audio quality
+
+### Speech Recognition & Processing
+- Implement real-time speech-to-text with <98% accuracy for professional vocabulary
+- Build domain-specific language models for technical interviews
+- Create noise cancellation and audio enhancement preprocessing
+- Develop latency optimization to provide suggestions within 1-2 seconds
+- Support multiple languages and accents with automatic detection
+
+### Question Analysis & Response Generation
+- Design an interview question classifier with categories:
+  - Technical knowledge assessment
+  - Behavioral/situational assessment
+  - Experience verification
+  - Hypothetical scenarios
+  - Culture fit evaluation
+- Implement context-aware response generation based on:
+  - Previously discussed topics in the current interview
+  - Common industry best practices
+  - Customizable response styles (concise, detailed, technical, etc.)
+- Create suggestion filtering to avoid inappropriate or dishonest responses
+- Develop a confidence scoring system for generated responses
+
+### User Interface
+- Create a minimal, non-intrusive overlay that won't be visible to interviewers
+- Design keyboard shortcuts for navigating suggestions
+- Implement adjustable transparency and position settings
+- Develop a mode to display only keywords/concepts rather than full responses
+- Create visual indicators for response confidence levels
+- Add screenshot protection to prevent detection
+
+### User Customization & Preparation
+- Allow users to upload resume and job description for personalized responses
+- Enable configuration of expertise level across different domains
+- Provide pre-interview training mode to customize the system to user's voice
+- Allow creation of prepared responses for anticipated questions
+- Support custom terminology and technical vocabulary
+
+### Data Security & Privacy
+- Implement end-to-end encryption for all audio/video processing
+- Create strict data retention policies with immediate post-session purging
+- Design offline processing capabilities for sensitive information
+- Develop detailed consent and privacy notifications
+- Include emergency purge functionality
+
+### Performance Optimization
+- Design efficient resource usage to run alongside video conferencing apps
+- Implement selective processing to handle resource constraints
+- Create backup modes for low-bandwidth situations
+- Develop lightweight models for devices with limited processing power
+
+## Development Approach
+
+### Phase 1: Core Functionality
+- Build speech recognition and basic speaker identification
+- Implement question classification system
+- Create simple response generation
+- Develop minimal user interface
+
+### Phase 2: Platform Integration
+- Add Zoom API integration
+- Extend to Google Meet
+- Implement Microsoft Teams compatibility
+- Create universal fallback capture method
+
+### Phase 3: Advanced Features
+- Enhance speaker identification accuracy
+- Improve context awareness in responses
+- Add customization options
+- Implement security features
+
+### Phase 4: Polish & Optimization
+- Optimize performance across devices
+- Refine user interface
+- Conduct extensive testing across platforms
+- Implement feedback mechanisms
+
+## Ethical Considerations
+The application should:
+- Include clear guidelines on ethical usage
+- Avoid enabling dishonest representations of skills or experience
+- Focus on helping users present their actual knowledge effectively
+- Include disclaimers about appropriate use cases
+- Provide alternatives like "I'd need to research that further" for unknown topics
+
+## Technical Stack Recommendations
+- Frontend: React with Electron for desktop capabilities
+- Backend: Node.js with Express
+- ML Processing: TensorFlow.js for client-side processing
+- Speech Recognition: Mozilla DeepSpeech or similar open-source solution
+- Cloud Services: Firebase for authentication, optional cloud processing
+- Database: IndexedDB for local storage, Firestore for optional cloud backup
+
+## Success Metrics
+- Speaker identification accuracy >95%
+- Question classification accuracy >90%
+- Response generation latency <2 seconds
+- User-reported helpfulness score >4.5/5
+- Session completion rate >98%
