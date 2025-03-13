@@ -103,6 +103,8 @@ The application will be available at `http://localhost:5000`.
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+
+joined
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
