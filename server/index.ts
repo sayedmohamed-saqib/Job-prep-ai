@@ -57,14 +57,20 @@ app.use((req, res, next) => {
     }
 
     // Listen on all network interfaces
-    const port = 5000;
-    server.listen({
+    const port = 3000;
+    const listenOptions: { port: number; host: string; reusePort?: boolean } = {
       port,
-      host: "0.0.0.0",
-      reusePort: true,
-    }, () => {
+      host: '127.0.0.1'
+    };
+
+    // Enable reusePort only on non-Windows platforms
+    if (process.platform !== 'win32') {
+      listenOptions.reusePort = true;
+    }
+
+    server.listen(listenOptions, () => {
       log(`Server running on port ${port}`);
-      log('WebSocket server ready at ws://0.0.0.0:5000/ws-interview');
+      log(`WebSocket server ready at ws://127.0.0.1:${port}/ws-interview`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
