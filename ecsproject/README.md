@@ -63,7 +63,7 @@ Feel free to contribute by submitting pull requests or reporting issues.
 How to Contribute
 Fork the repository
 -Clone the repository
-   git clone [https://github.com/your-username/Job-prep-ai
+   git clone (https://github.com/sayedmohamed-saqib/Job-prep-ai)
 -Create a new branch
    git checkout -b feature-branch
 -Make your changes and commit
