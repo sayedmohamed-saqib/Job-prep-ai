@@ -16,6 +16,5 @@
 4. Download CSV Files
    - use the button in the side panel to download a log of most dominant emotions for every 1 minute interval
 5 Screenshot of the application
-
-
+[Screenshot of the workflow](https://github.com/sayedmohamed-saqib/Job-prep-ai/blob/main/ecsproject/ssworkflow.png)
 
