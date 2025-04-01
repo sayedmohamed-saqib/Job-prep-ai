@@ -15,5 +15,7 @@
    - Emotion labels will be displayed on the frames around detected faces. (Using the DeepFace extended models to predict age, emotions, gender and racial identity of the persons.)
 4. Download CSV Files
    - use the button in the side panel to download a log of most dominant emotions for every 1 minute interval
+5 Screenshot of the application
+
 
 
